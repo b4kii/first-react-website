@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+nav {
+  /* background: url("https://wallpaperaccess.com/full/697539.jpg"); */
+  background-color: turquoise;
+  /* min-height: 100vh; */
+  display: flex;
+  justify-content: right;
+  /* position: relative; */
+}
+#about {
+  min-height: 100vh;
+  background-color: lightcoral;
+}
+
+#gallery {
+  min-height: 100vh;
+  background-color: rgb(104, 240, 158);
+}
+
+#pricing {
+  min-height: 100vh;
+  background-color: lightyellow;
+}
+
+#contact {
+  min-height: 100vh;
+  background-color: lightpink;
+}
