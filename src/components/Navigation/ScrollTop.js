@@ -64,7 +64,6 @@ export default function ScrollTop() {
         }
       }}
       >
-      {/* <span className>&#8682;</span> */}
     <img src={Arrow} alt="arrow"/>
     </motion.button>
   );

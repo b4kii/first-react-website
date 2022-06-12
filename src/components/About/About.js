@@ -23,10 +23,11 @@ export default function About() {
         // animate circle while scrolling
         document.getElementById("c1").style.transform = `translateX(${yPosOffset * (-10)}vh)`;
         document.getElementById("c2").style.transform = `translateX(${yPosOffset * (10)}vh)`;
-        document.getElementById("c3").style.transform = `translateY(${yPosOffset * -5}vh)`;
+        document.getElementById("c3").style.transform = `translateY(${yPosOffset * -2}vh)`;
         document.getElementById("c4").style.transform = `translateY(${yPosOffset * 2}vh)`;
         document.getElementById("c5").style.transform = `translateY(${yPosOffset * (3)}vh) translateX(${yPosOffset * (-3)}vh)`;
         document.getElementById("c6").style.transform = `translateY(${yPosOffset * (5)}vh)`;
+        console.log(yPos);
       }
     };
 

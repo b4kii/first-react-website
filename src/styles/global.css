@@ -19,11 +19,6 @@ body {
   text-align: center;
 }
 
-#gallery {
-  min-height: 100vh;
-  background-color: turquoise;
-}
-
 #pricing {
   min-height: 100vh;
   background-color: lightskyblue;
