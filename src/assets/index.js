@@ -1,0 +1,1 @@
+export const Bird = require("./bird.jpg");

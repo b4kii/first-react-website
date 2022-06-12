@@ -11,37 +11,30 @@ html {
 }
 
 body {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", Helvetica, Verdana, Tahoma, sans-serif;
+  overflow-x: hidden;
 }
 
 .App {
   text-align: center;
 }
 
-nav {
-  /* background: url("https://wallpaperaccess.com/full/697539.jpg"); */
-  background-color: turquoise;
-  /* min-height: 100vh; */
-  display: flex;
-  justify-content: right;
-  /* position: relative; */
-}
 #about {
   min-height: 100vh;
-  background-color: lightcoral;
+  background-color: lightblue;
 }
 
 #gallery {
   min-height: 100vh;
-  background-color: rgb(104, 240, 158);
+  background-color: turquoise;
 }
 
 #pricing {
   min-height: 100vh;
-  background-color: lightyellow;
+  background-color: lightskyblue;
 }
 
 #contact {
   min-height: 100vh;
-  background-color: lightpink;
+  background-color: blue;
 }

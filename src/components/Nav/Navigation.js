@@ -4,8 +4,9 @@ import { useState } from "react";
 import Overlay from "./Overlay";
 import HamburgerButton from "./HamburgerButton";
 import CrossButton from "./CrossButton";
-import styles from "../../styles/Navigation.module.css"
 import ScrollTop from "./ScrollTop";
+
+import styles from "../../styles/Navigation.module.css"
 
 export default function Navbar() {
   const [isDropped, setIsDropped] = useState(false);
@@ -21,11 +22,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav>
+    <>
       {/* TODO: Add LOGO on the left side */}
-      {/* <div className={styles.logo}>LOGO</div> */}
-      {/* TODO: Add simple animation on the middle */}
-      {/* <div className={styles["small-animation"]}>Animation</div> */}
+      <div className={styles.logo}>LOGO</div>
       <Overlay hideOverlay={setTransition}/>
       <div className={styles["button-wrapper"]}>
         {isDropped ? (
@@ -35,6 +34,6 @@ export default function Navbar() {
         )}
       </div>
       <ScrollTop />
-    </nav>
+    </>
   );
 }

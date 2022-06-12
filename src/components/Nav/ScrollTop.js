@@ -54,7 +54,7 @@ export default function ScrollTop() {
         duration: 0.2
       }}
       whileHover = {{
-        y: [0, -10, 10, -5, 0],
+        y: [0, -15, 5, -5, 0],
         transition: {
           repeat: Infinity,
           type: "spring",
@@ -63,7 +63,8 @@ export default function ScrollTop() {
         }
       }}
       >
-      &#8682;
+      {/* <span className>&#8682;</span> */}
+    <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/64/undefined/external-up-arrow-arrows-flatart-icons-flat-flatarticons-3.png" alt="arrow"/>
     </motion.button>
   );
 }
