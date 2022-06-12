@@ -77,26 +77,24 @@
   right: 0;
 }
 
+.hamburger,
 .cross {
-  animation: spin 0.2s ease-out;
+  color: #181818;
+  border: none;
+  background: none;
   position: fixed;
   z-index: 20;
   cursor: pointer;
+}
+
+.cross {
+  animation: spin 0.2s ease-out;
   font-size: 2rem;
-  border: none;
-  background: none;
-  color: #4a78ff;
 }
 
 .hamburger {
   animation: pop 0.7s;
-  position: fixed;
-  z-index: 20;
-  cursor: pointer;
   font-size: 3rem;
-  border: none;
-  background: none;
-  color: #4a78ff;
 }
 
 .arrow {

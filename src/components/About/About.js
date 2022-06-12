@@ -5,6 +5,16 @@ import styles from "../../styles/About.module.css"
 import { Flower } from "../../assets/"
 
 export default function About() {
+
+  const circles = [
+    {nameClass: "circle1", id: "c1"},
+    {nameClass: "circle2", id: "c2"},
+    {nameClass: "circle3", id: "c3"},
+    {nameClass: "circle4", id: "c4"},
+    {nameClass: "circle5", id: "c5"},
+    {nameClass: "circle6", id: "c6"},
+  ]
+
   useEffect(() => {
 
     const handleScrollDown = () => {
@@ -14,8 +24,15 @@ export default function About() {
       let yPosOffset = -yPos * offset;
       let getHeight = (document.getElementById("about").clientHeight * offset) * -1;
 
+
       if (yPosOffset > getHeight) {
-        document.getElementById("about").style.transform = `translateY(${offset}vh)`;
+        document.getElementById("about").style.transform = `translateY(${yPosOffset}vh)`;
+        document.getElementById("c1").style.transform = `translateX(${yPosOffset * (-10)}vh)`;
+        document.getElementById("c2").style.transform = `translateX(${yPosOffset * (10)}vh)`;
+        document.getElementById("c3").style.transform = `translateY(${yPosOffset * -5}vh)`;
+        document.getElementById("c4").style.transform = `translateY(${yPosOffset * 2}vh)`;
+        document.getElementById("c5").style.transform = `translateY(${yPosOffset * (3)}vh) translateX(${yPosOffset * (-3)}vh)`;
+        document.getElementById("c6").style.transform = `translateY(${yPosOffset * (5)}vh)`;
       }
     };
 
@@ -29,7 +46,13 @@ export default function About() {
   return (
     <section 
     id="about"
-    className={styles["about-section"]}>
+    className={styles["about-section"]}
+    >
+      {
+        circles.map((circle) => (
+          <div id={circle.id} className={styles[`${circle.nameClass}`]} key={circle.id}></div>
+        ))
+      }
       <motion.div 
       className={styles.text}
       animate={{
@@ -38,12 +61,15 @@ export default function About() {
       transition={{
         duration: 1,
         type: "spring",
-        bounce: 0.2
+        bounce: 0.23
       }}
       initial={{
         x: "-110%"
       }}
       >
+        <h2 className={styles.title}>
+          <p>ABOUT ME</p>
+        </h2>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias aliquid delectus accusantium repellendus dignissimos aut facere hic nisi necessitatibus, tempora quae nesciunt numquam vero, nostrum quaerat eius dolorem autem fugit aspernatur ad. Officiis est voluptates dolorem laudantium a quas in laborum harum, dolores aliquid? Animi culpa, voluptatibus, in placeat beatae facere, laboriosam sequi nam ipsum deserunt quam non aut repudiandae sed nisi expedita. Assumenda, quo? Aspernatur earum quaerat consectetur ad voluptatem, fugit vitae ipsum facilis iusto laudantium vero? Dolores eos, aut adipisci placeat quia sed, sapiente in consequuntur autem ad iusto deserunt quidem magni corrupti, ex perferendis distinctio beatae dolorum.
       </motion.div>
       <motion.div
@@ -54,7 +80,7 @@ export default function About() {
       transition={{
         duration: 1,
         type: "spring",
-        bounce: 0.2
+        bounce: 0.23
       }}
       initial={{
         x: "110%"
