@@ -1,4 +1,4 @@
-/* TODO: make website prettier, add logo, add animation */
+/* TODO: make website prettier, add logo */
 
 .overlay {
   height: 0;
@@ -50,12 +50,20 @@
   font-size: 4rem;
 }
 
+.logo-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .logo {
   position: absolute;
-  /* left: 45%; */
-  margin: 1rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
   font-size: 2rem;
-  text-align: center;
+  top: 0;
+  left: 0;
+  animation: pop 0.7s;
 }
 
 .button-wrapper {

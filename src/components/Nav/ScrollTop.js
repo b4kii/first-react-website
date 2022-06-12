@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { motion } from "framer-motion";
 
 import buttons from "../../styles/Navigation.module.css"
+import { Arrow } from "../../assets";
 
 export default function ScrollTop() {
 
@@ -64,7 +65,7 @@ export default function ScrollTop() {
       }}
       >
       {/* <span className>&#8682;</span> */}
-    <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/64/undefined/external-up-arrow-arrows-flatart-icons-flat-flatarticons-3.png" alt="arrow"/>
+    <img src={Arrow} alt="arrow"/>
     </motion.button>
   );
 }

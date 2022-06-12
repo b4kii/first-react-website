@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion"
 
 import styles from "../../styles/About.module.css"
-import { Bird} from "../../assets/"
+import { Flower } from "../../assets/"
 
 export default function About() {
   useEffect(() => {
@@ -60,7 +60,7 @@ export default function About() {
         x: "110%"
       }}
       >
-        <img src={Bird} alt="" />
+        <img src={Flower} alt="" />
       </motion.div>
     </section>
   );
