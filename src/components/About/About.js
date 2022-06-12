@@ -1,19 +1,11 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion"
+import Circles from "./Circles"
 
 import styles from "../../styles/About.module.css"
 import { Flower } from "../../assets/"
 
 export default function About() {
-
-  const circles = [
-    {nameClass: "circle1", id: "c1"},
-    {nameClass: "circle2", id: "c2"},
-    {nameClass: "circle3", id: "c3"},
-    {nameClass: "circle4", id: "c4"},
-    {nameClass: "circle5", id: "c5"},
-    {nameClass: "circle6", id: "c6"},
-  ]
 
   useEffect(() => {
 
@@ -26,7 +18,9 @@ export default function About() {
 
 
       if (yPosOffset > getHeight) {
+        // hide about section under another one while scrolling
         document.getElementById("about").style.transform = `translateY(${yPosOffset}vh)`;
+        // animate circle while scrolling
         document.getElementById("c1").style.transform = `translateX(${yPosOffset * (-10)}vh)`;
         document.getElementById("c2").style.transform = `translateX(${yPosOffset * (10)}vh)`;
         document.getElementById("c3").style.transform = `translateY(${yPosOffset * -5}vh)`;
@@ -48,11 +42,8 @@ export default function About() {
     id="about"
     className={styles["about-section"]}
     >
-      {
-        circles.map((circle) => (
-          <div id={circle.id} className={styles[`${circle.nameClass}`]} key={circle.id}></div>
-        ))
-      }
+      <Circles />
+
       <motion.div 
       className={styles.text}
       animate={{

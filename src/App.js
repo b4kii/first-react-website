@@ -1,7 +1,7 @@
 import "./styles/global.css";
 
-import Navigation from "./components/Nav/Navigation";
-import About from "./components/About/About";
+import {Navigation} from "./components/Navigation";
+import {About} from "./components/About";
 
 export default function App() {
   return (
@@ -9,7 +9,7 @@ export default function App() {
       <Navigation />
 
       <About />
-      <div id="gallery"></div>
+      {/* < */}
       <div id="pricing"></div>
       <div id="contact"></div>
     </>

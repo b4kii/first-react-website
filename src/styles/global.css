@@ -19,11 +19,6 @@ body {
   text-align: center;
 }
 
-#about {
-  min-height: 100vh;
-  background-color: lightblue;
-}
-
 #gallery {
   min-height: 100vh;
   background-color: turquoise;
