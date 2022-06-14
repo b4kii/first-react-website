@@ -1,216 +1,12 @@
-/* .about-section {
-  background-image: linear-gradient(
-    to right top,
-    #2c05e9,
-    #004dfd,
-    #0071ff,
-    #008fff,
-    #00aaff,
-    #00bbfe,
-    #00caf8,
-    #00d7ef,
-    #00e2e8,
-    #00ebda,
-    #27f4c7,
-    #5ffbb0
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  z-index: -10;
-  position: sticky;
-  top: 0;
-}
-
-.text-wrapper,
-.photo-wrapper {
-  height: 80vh;
-  max-width: 80vh;
-  padding: 3%;
-  margin: 2%;
-  background: linear-gradient(
-    170deg,
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.2)
-  );
-  -webkit-backdrop-filter: blur(30px);
-  backdrop-filter: blur(30px);
-  box-shadow: 0 8px 24px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 0.5rem;
-  display: flex;
-}
-
-.about-header {
-  margin-bottom: 1rem;
-}
-
-.text-wrapper {
-  align-items: center;
-  flex-direction: column;
-}
-
-.photo > img {
-  width: 100%;
-}
-
-.circle1 {
-  position: absolute;
-  top: 25%;
-  left: 25%;
-  height: 100px;
-  width: 100px;
-  background-color: rgb(31, 77, 231);
-  border-radius: 10rem;
-  animation: pop 0.7s;
-}
-
-.circle2 {
-  position: absolute;
-  top: 10%;
-  left: 2%;
-  height: 200px;
-  width: 200px;
-  background-color: rgb(75, 10, 112);
-  border-radius: 10rem;
-  animation: pop 0.5s;
-}
-
-.circle3 {
-  position: absolute;
-  top: 60%;
-  right: 20%;
-  height: 300px;
-  width: 300px;
-  border-radius: 10rem;
-  background-color: violet;
-  animation: pop 0.6s;
-}
-
-.circle4 {
-  position: absolute;
-  top: 10%;
-  right: 30%;
-  width: 100px;
-  height: 100px;
-  border-radius: 10rem;
-  background-color: lightpink;
-  animation: pop 0.7s;
-}
-
-.circle5 {
-  position: absolute;
-  top: 40%;
-  left: 5%;
-  width: 400px;
-  height: 400px;
-  border-radius: 15rem;
-  background-color: turquoise;
-  animation: pop 0.8s;
-}
-
-.circle6 {
-  position: absolute;
-  top: 50%;
-  left: 45%;
-  width: 200px;
-  height: 200px;
-  border-radius: 10rem;
-  background-color: rgb(17, 199, 78);
-  animation: pop 0.9s;
-}
-
-.circle1,
-.circle2,
-.circle3,
-.circle4,
-.circle5,
-.circle6 {
-  transition: 0.2s;
-}
-
-@keyframes pop {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  75% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .about-section {
-    overflow: hidden;
-    flex-direction: column;
-  }
-
-  .text-wrapper, .photo-wrapper {
-    width: 90%;
-    height: auto;
-  }
-  .text-wrapper {
-    margin-top: 20%;
-  }
-
-  .photo-wrapper {
-    justify-content: center;
-  }
-  .photo-wrapper > img {
-    width: 40%;
-    height: 40%;
-  }
-}
-
-@media screen and (min-width: 351px) and (max-width: 600px) {
-  .about-section {
-    flex-direction: column;
-    gap: 10vh;
-  }
-
-  .text-wrapper,
-  .photo-wrapper {
-    width: 90%;
-    height: auto;
-  }
-
-  .text-wrapper {
-    margin-top: 10%;
-  }
-
-  .photo-wrapper {
-    justify-content: center;
-  }
-  .photo-wrapper > img {
-    width: 50%;
-    height: 50%;
-  }
-  .circle5 {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 601px) and (max-width: 767px) {
-  .about-section {
-    flex-direction: column;
-  }
-  .text,
-  .photo {
-    position: static;
-    max-width: 100%;
-    height: auto;
-  }
-  .circle5 {
-    display: none;
-  }
-   */
-
 /* Trying mobile first approach on about section cuz im fed up fixing responsiveness*/
+/* I guess it still sucks */
+/* But I have an idea! */
+/* TODO: fix this shjity landing page
+  DESKTOP 
+  - step 1 - add glass effect only on logo and buttons
+  - step 2 - split landing page 50vh/50vh
+  - step 3 - make image appear from below and stay on first half of the page
+  - step 4 - make about section on the second half of the page */
 
 .about-section {
   min-height: 100vh;
@@ -261,9 +57,15 @@
 }
 
 .about-header {
-  color: darkblue;
+  color: white;
+  font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
+}
+
+.text {
+  /* line-height: 2rem; */
+  /* color: white; */
 }
 
 .photo-wrapper {
@@ -282,7 +84,14 @@
   left: 25%;
   height: 100px;
   width: 100px;
-  background-color: rgb(31, 77, 231);
+  background-image: linear-gradient(
+    to right top,
+    #1f4de7,
+    #7676ef,
+    #a9a2f5,
+    #d6d0fb,
+    #ffffff
+  );
   border-radius: 10rem;
   animation: pop 0.7s;
 }
@@ -293,7 +102,14 @@
   left: 2%;
   height: 200px;
   width: 200px;
-  background-color: rgb(75, 10, 112);
+  background-image: linear-gradient(
+    to right top,
+    #28053c,
+    #563f6c,
+    #897b9c,
+    #c1bccd,
+    #ffffff
+  );
   border-radius: 10rem;
   animation: pop 0.5s;
 }
@@ -305,7 +121,14 @@
   height: 300px;
   width: 300px;
   border-radius: 10rem;
-  background-color: violet;
+  background-image: linear-gradient(
+    to right top,
+    #5e045e,
+    #7e4e8b,
+    #a288b6,
+    #ccc3dc,
+    #ffffff
+  );
   animation: pop 0.6s;
 }
 
@@ -316,7 +139,14 @@
   width: 100px;
   height: 100px;
   border-radius: 10rem;
-  background-color: lightpink;
+  background-image: linear-gradient(
+    to right top,
+    #9a549a,
+    #ac81b9,
+    #c2abd4,
+    #ddd5eb,
+    #ffffff
+  );
   animation: pop 0.7s;
 }
 
@@ -328,7 +158,14 @@
   width: 400px;
   height: 400px;
   border-radius: 15rem;
-  background-color: turquoise;
+  background-image: linear-gradient(
+    to right top,
+    #d30037,
+    #e75b89,
+    #e898c9,
+    #e9cff0,
+    #ffffff
+  );
   animation: pop 0.8s;
 }
 
@@ -339,7 +176,14 @@
   width: 200px;
   height: 200px;
   border-radius: 10rem;
-  background-color: rgb(17, 199, 78);
+  background-image: linear-gradient(
+    to right top,
+    #003983,
+    #5b64a1,
+    #9494bf,
+    #cac8df,
+    #ffffff
+  );
   animation: pop 0.9s;
 }
 
@@ -413,5 +257,8 @@
 
   .circle5 {
     display: block;
+  }
+  .text {
+    line-height: 1.4rem;
   }
 }

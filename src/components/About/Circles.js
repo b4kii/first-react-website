@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../../styles/About.module.css"
 
 
-// Change to SVG 
+// TODO: Change to SVG 
 export default function Circles() {
   const circles = [
     {nameClass: "circle1", id: "c1"},
@@ -18,7 +18,12 @@ export default function Circles() {
     <>
       {
         circles.map((circle) => (
-          <div id={circle.id} className={styles[`${circle.nameClass}`]} key={circle.id}></div>
+          <div 
+          id={circle.id}
+          className={styles[`${circle.nameClass}`]}
+          key={circle.id}
+          >
+          </div>
         ))
       }
     </>
