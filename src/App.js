@@ -8,7 +8,6 @@ export default function App() {
   return (
     <>
       <Navigation />
-
       <About />
       <Gallery />
       <div id="pricing"></div>

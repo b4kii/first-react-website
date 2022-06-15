@@ -24,9 +24,7 @@ export default function Navbar() {
   return (
     <>
       {/* TODO: Add LOGO on the left side */}
-      <div className={styles["logo-wrapper"]}>
-        <h1 className={styles.logo}>LOGO</h1>
-      </div>
+      <h1 className={styles.logo}>LOGO</h1>
       <Overlay hideOverlay={setTransition}/>
       <div className={styles["button-wrapper"]}>
         {isDropped ? (

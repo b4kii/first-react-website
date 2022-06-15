@@ -1,19 +1,21 @@
 .gallery-section {
   display: flex;
-  flex-direction: column;
-  height: max-content;
-  z-index: 10;
   background-color: #11efd1;
 }
 
 @media screen and (min-width: 1200px) {
   .gallery-section {
-    display: block;
     min-height: 100vh;
-    padding: 5%;
+    /* padding: 5%; */
     column-count: 4;
     column-width: 25%;
-    background-color: #11efd1;
+    background-color: white;
     /* padding: 12px 0; */
+    display: grid;
+    place-items: center;
   }
+
+  /* .video {
+    z-index: -1;
+  } */
 }

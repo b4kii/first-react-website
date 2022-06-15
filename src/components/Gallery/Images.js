@@ -12,34 +12,13 @@ import {
 
 export default function Images() {
   const imagesContainer = [
-    {
-      source: Bird,
-      id: 1
-    },
-    {
-      source: Flower,
-      id: 2
-    },
-    {
-      source: Rice,
-      id: 3
-    },
-    {
-      source: Strawberries,
-      id: 4
-    },
-    {
-      source: Dog,
-      id: 5
-    },
-    {
-      source: Cat,
-      id: 6
-    },
-    {
-      source: SmallBird,
-      id: 7
-    }
+    { source: Bird, id: 1 },
+    { source: Flower, id: 2 },
+    { source: Rice, id: 3 },
+    { source: Strawberries, id: 4 },
+    { source: Dog, id: 5 },
+    { source: Cat, id: 6 },
+    { source: SmallBird, id: 7 }
   ]
 
   return(
