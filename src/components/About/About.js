@@ -39,6 +39,7 @@ export default function About() {
   }, [])
 
   return (
+
     <section 
     id="about"
     className={styles["about-section"]}
@@ -50,7 +51,6 @@ export default function About() {
       <motion.div
       className={styles["photo-wrapper"]}
       animate={{
-        // x: 0
         y: 20
       }}
       transition={{
@@ -59,32 +59,35 @@ export default function About() {
         bounce: 0.23
       }}
       initial={{
-        // x: "110%"
         y: "-110%",
       }}
       >
         <img src={Person} alt="" />
       </motion.div>
 
-      <motion.div 
-      className={styles["text-wrapper"]}
-      animate={{
-        x: 0
-      }}
-      transition={{
-        duration: 0.4,
-      }}
-      initial={{
-        x: "-110%"
-      }}
+      <div 
+      className={styles.container}
       >
-        <h2 className={styles["about-header"]}>
-          ABOUT
-        </h2>
-        <p className={styles.text}>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias aliquid delectus accusantium repellendus dignissimos aut facere hic nisi necessitatibus, tempora quae nesciunt numquam vero, nostrum quaerat eius dolorem autem fugit aspernatur ad. Officiis est voluptates dolorem laudantium a quas in laborum harum, dolores aliquid? Animi culpa, voluptatibus, in placeat beatae facere, laboriosam sequi nam ipsum deserunt quam non aut repudiandae sed nisi expedita. Assumenda, quo? Aspernatur earum quaerat consectetur ad voluptatem, fugit vitae ipsum facilis iusto laudantium vero? Dolores eos, aut adipisci placeat quia sed, sapiente in consequuntur autem ad iusto deserunt quidem magni corrupti, ex perferendis distinctio beatae dolorum.
-        </p>
-      </motion.div>
+        <motion.div 
+        className={styles["text-wrapper"]}
+        animate={{
+          x: 0
+        }}
+        transition={{
+          duration: 0.4,
+        }}
+        initial={{
+          x: "-110%"
+        }}
+        >
+          <h2 className={styles["about-header"]}>
+            ABOUT
+          </h2>
+          <p className={styles["about-text"]}>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias aliquid delectus accusantium repellendus dignissimos aut facere hic nisi necessitatibus, tempora quae nesciunt numquam vero, nostrum quaerat eius dolorem autem fugit aspernatur ad. Officiis est voluptates dolorem laudantium a quas in laborum harum, dolores aliquid? Animi culpa, voluptatibus, in placeat beatae facere, laboriosam sequi nam ipsum deserunt quam non aut repudiandae sed nisi expedita. Assumenda, quo? Aspernatur earum quaerat consectetur ad voluptatem, fugit vitae ipsum facilis iusto laudantium vero? Dolores eos, aut adipisci placeat quia sed, sapiente in consequuntur autem ad iusto deserunt quidem magni corrupti, ex perferendis distinctio beatae dolorum.
+          </p>
+        </motion.div>
+      </div>
 
     </section>
   );
