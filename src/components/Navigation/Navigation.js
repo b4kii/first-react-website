@@ -1,22 +1,22 @@
-import React from "react";
-import { useState } from "react";
+import React from 'react';
+import { useState } from 'react';
 
-import Overlay from "./Overlay";
-import HamburgerButton from "./HamburgerButton";
-import CrossButton from "./CrossButton";
-import ScrollTop from "./ScrollTop";
+import Overlay from './Overlay';
+import HamburgerButton from './HamburgerButton';
+import CrossButton from './CrossButton';
+import ScrollTop from './ScrollTop';
 
-import styles from "../../styles/Navigation.module.css"
+import styles from '../../styles/Navigation.module.css';
 
 export default function Navbar() {
   const [isDropped, setIsDropped] = useState(false);
 
   const setTransition = () => {
     if (isDropped) {
-      document.getElementById("menu").style.height = "0";
+      document.getElementById('menu').style.height = '0';
       setIsDropped(false);
     } else {
-      document.getElementById("menu").style.height = "100vh";
+      document.getElementById('menu').style.height = '100vh';
       setIsDropped(true);
     }
   };
@@ -25,8 +25,8 @@ export default function Navbar() {
     <>
       {/* TODO: Add LOGO on the left side */}
       <h1 className={styles.logo}>LOGO</h1>
-      <Overlay hideOverlay={setTransition}/>
-      <div className={styles["button-wrapper"]}>
+      <Overlay hideOverlay={setTransition} />
+      <div className={styles['button-wrapper']}>
         {isDropped ? (
           <CrossButton buttonClick={setTransition} condition={isDropped} />
         ) : (
