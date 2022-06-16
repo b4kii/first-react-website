@@ -1,7 +1,7 @@
 import React from "react";
-import Images from "./Images";
 
 import styles from "../../styles/Gallery.module.css";
+import {images} from "./Images";
 
 export default function Gallery() {
   return (
@@ -9,9 +9,13 @@ export default function Gallery() {
     id="gallery"
     className={styles["gallery-section"]}
     >
-
-      <Images />
-
+      <div className={styles["images-wrapper"]}>
+        <div 
+        className={styles.image}
+        style={{background: `url(${images[3].source})`}}
+        >
+        </div>
+      </div>
     </section>
   );
 }

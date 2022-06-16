@@ -6,16 +6,21 @@
 @media screen and (min-width: 1200px) {
   .gallery-section {
     min-height: 100vh;
-    /* padding: 5%; */
-    column-count: 4;
-    column-width: 25%;
-    background-color: white;
-    /* padding: 12px 0; */
+    background-color: grey;
     display: grid;
     place-items: center;
   }
 
-  /* .video {
-    z-index: -1;
-  } */
+  .images-wrapper {
+    width: 50%;
+    height: 500px;
+  }
+
+  .image {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }

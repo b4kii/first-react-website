@@ -1,10 +1,22 @@
-export const Bird = require("./bird.jpg");
-export const Flower = require("./flower.jpg");
-export const Rice = require("./rice.jpg");
-export const Strawberries = require("./strawberries.jpg");
-export const SmallBird = require("./small-bird.jpg");
-export const Cat = require("./cat.jpg");
-export const Dog = require("./dog.jpg");
-export const Person = require("./person2.png");
+import Bird from "./bird.jpg";
+import Flower from "./flower.jpg";
+import Rice from "./rice.jpg";
+import Strawberries from "./strawberries.jpg";
+import SmallBird from "./small-bird.jpg";
+import Cat from "./cat.jpg";
+import Dog from "./dog.jpg";
+import Person from "./person2.png";
 
-export const Arrow = require("./arrow.png");
+import Arrow from "./arrow.png";
+
+export {
+  Bird,
+  Flower,
+  Rice,
+  Strawberries,
+  SmallBird,
+  Cat,
+  Dog,
+  Person,
+  Arrow
+}

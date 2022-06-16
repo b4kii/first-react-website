@@ -1,5 +1,3 @@
-import React from "react"
-
 import {
   Bird,
   Flower,
@@ -10,8 +8,7 @@ import {
   SmallBird
 } from "../../assets/";
 
-export default function Images() {
-  const imagesContainer = [
+export const images = [
     { source: Bird, id: 1 },
     { source: Flower, id: 2 },
     { source: Rice, id: 3 },
@@ -19,17 +16,19 @@ export default function Images() {
     { source: Dog, id: 5 },
     { source: Cat, id: 6 },
     { source: SmallBird, id: 7 }
-  ]
+]
 
-  return(
-    <>
-      {
-        imagesContainer.map((image) => (
-          <div className="images" key={image.id}>
-            <img src={image.source} style={{width: '100%'}} alt=""/>
-          </div>
-        ))
-      }
-    </>
-  );
-}
+// export default function Images() {
+
+//   return(
+//     <>
+//       {
+//         imagesContainer.map((image) => (
+//           <div className="images" key={image.id}>
+//             <img src={image.source} style={{width: '100%'}} alt=""/>
+//           </div>
+//         ))
+//       }
+//     </>
+//   );
+// }

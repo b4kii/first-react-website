@@ -72,9 +72,7 @@ export default function About() {
         x: 0
       }}
       transition={{
-        duration: 1,
-        type: "spring",
-        bounce: 0.23
+        duration: 0.4,
       }}
       initial={{
         x: "-110%"
