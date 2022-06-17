@@ -6,47 +6,51 @@ import { images } from "./Images";
 export default function Gallery() {
   const [currentImage, setCurrentImage] = useState(0);
 
-  const setTransition = () => {};
+  // TODO: Add transition on image change
+  // const setTransition = () => {
+  //   document.getElementById(images[currentImage].id).style.transform =
+  //     "scale(0.5)";
+  // };
 
   return (
     <section id="gallery" className={styles["gallery-section"]}>
       <div className={styles["images-wrapper"]}>
-        {/* <div
-          className={styles.image}
-          style={{ background: `url(${images[3].source})` }}
-        ></div> */}
-
-        <div
+        <span
           className={styles["left-arrow"]}
           onClick={() => {
-            setTransition();
+            // setTransition();
             if (currentImage > 0) {
               setCurrentImage(currentImage - 1);
             } else {
               setCurrentImage(images.length - 1);
             }
+            console.log(currentImage);
           }}
-        ></div>
+        >
+          <img src="https://img.icons8.com/ultraviolet/64/undefined/chevron-left.png" />
+        </span>
 
-        <div
+        <span
           className={styles["right-arrow"]}
           onClick={() => {
-            setTransition();
+            // setTransition();
             if (currentImage < images.length - 1) {
               setCurrentImage(currentImage + 1);
             } else {
               setCurrentImage(0);
             }
+            console.log(currentImage);
           }}
-        ></div>
+        >
+          <img src="https://img.icons8.com/ultraviolet/64/undefined/chevron-right.png" />
+        </span>
 
         <img
           id={images[currentImage].id}
           className={styles.image}
           src={images[currentImage].source}
         />
-
-        {images[currentImage].id}
+        {currentImage}
       </div>
     </section>
   );

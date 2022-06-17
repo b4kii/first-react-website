@@ -19,22 +19,27 @@
 
   .left-arrow,
   .right-arrow {
-    width: 50px;
-    height: 50px;
-    background-color: red;
+    height: 64px;
+    width: 64px;
     position: absolute;
     z-index: 2;
     cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .left-arrow:hover,
+  .right-arrow:hover {
+    transform: scale(1.15);
   }
 
   .left-arrow {
-    left: 0;
-    top: 45%;
+    left: 2%;
+    top: calc(50% - 32px);
   }
 
   .right-arrow {
-    right: 0;
-    top: 45%;
+    right: 2%;
+    top: calc(50% - 32px);
   }
 
   .image {

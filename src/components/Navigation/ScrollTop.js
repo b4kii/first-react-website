@@ -1,11 +1,10 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import buttons from "../../styles/Navigation.module.css"
+import buttons from "../../styles/Navigation.module.css";
 import { Arrow } from "../../assets";
 
 export default function ScrollTop() {
-
   const [isShowed, setIsShowed] = useState(false);
 
   const toTop = () => {
@@ -15,46 +14,49 @@ export default function ScrollTop() {
   };
 
   useEffect(() => {
-
     let lastYPos = 0;
     const handleScroll = () => {
       const yPos = window.scrollY;
 
       let scrollHeight = Math.max(
-        document.body.scrollHeight, document.documentElement.scrollHeight,
-        document.body.offsetHeight, document.documentElement.offsetHeight,
-        document.body.clientHeight, document.documentElement.clientHeight
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.offsetHeight,
+        document.body.clientHeight,
+        document.documentElement.clientHeight
       );
-      let lastElement = document.getElementById("root").lastElementChild.clientHeight;
-      let bottomPage = yPos === scrollHeight - lastElement;
+      let lastElement =
+        document.getElementById("root").lastElementChild.clientHeight;
+      let bottomPage = Math.floor(yPos ) === scrollHeight - lastElement;
 
       const isScrollingUp = (yPos < lastYPos || bottomPage) && yPos;
-    
+
       setIsShowed(isScrollingUp);
       lastYPos = yPos;
     };
 
     window.addEventListener("scroll", handleScroll, false);
-  
+
     return () => {
       window.addEventListener("scroll", handleScroll, false);
-    }
-  }, [])
+    };
+  }, []);
 
   return (
     <motion.button
       onClick={toTop}
       className={buttons.arrow}
-      animate = {{
+      animate={{
         x: isShowed ? 0 : 500
       }}
       initial={{
         x: 500
       }}
-      transition = {{
+      transition={{
         duration: 0.2
       }}
-      whileHover = {{
+      whileHover={{
         y: [0, -15, 5, -5, 0],
         transition: {
           repeat: Infinity,
@@ -66,9 +68,9 @@ export default function ScrollTop() {
       style={{
         background: `url(${Arrow})`
       }}
-      >
-    {/* Idk if its better to use img tag or icon as bg image */}
-    {/* <img src={Arrow} alt="arrow"/> */}
+    >
+      {/* Idk if its better to use img tag or icon as bg image */}
+      {/* <img src={Arrow} alt="arrow"/> */}
     </motion.button>
   );
 }
