@@ -13,11 +13,13 @@ module.exports = {
             "jsx": true
         },
         "ecmaVersion": "latest",
-        "sourceType": "module"
+        "sourceType": "module",
     },
     "plugins": [
         "react"
     ],
     "rules": {
+        "react/prop-types": "off",
+        "no-unused-vars": "off"
     }
 }

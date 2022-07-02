@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 
 import styles from "../../styles/Gallery.module.css";
 import { images } from "./Images";
 
 export default function Gallery() {
-  const [currentImage, setCurrentImage] = useState(0);
+  const [currentPhoto, setCurrentPhoto] = useState(0);
+  const photos = document.getElementsByClassName(styles["photo"]);
 
-  // TODO: Add transition on image change
-  // const setTransition = () => {
-  //   document.getElementById(images[currentImage].id).style.transform =
-  //     "scale(0.5)";
-  // };
+  function changePhoto(next) {
+    if (next >= photos.length) next = 0;
+    if (next < 0) next = photos.length - 1;
+
+    photos[currentPhoto].classList.toggle(styles["active"]);
+    photos[next].classList.toggle(styles["active"]);
+    setCurrentPhoto(next);
+  }
 
   return (
     <section id="gallery" className={styles["gallery-section"]}>
@@ -18,13 +24,8 @@ export default function Gallery() {
         <span
           className={styles["left-arrow"]}
           onClick={() => {
-            // setTransition();
-            if (currentImage > 0) {
-              setCurrentImage(currentImage - 1);
-            } else {
-              setCurrentImage(images.length - 1);
-            }
-            console.log(currentImage);
+            setCurrentPhoto(currentPhoto - 1);
+            changePhoto(currentPhoto - 1);
           }}
         >
           <img src="https://img.icons8.com/ultraviolet/64/undefined/chevron-left.png" />
@@ -33,24 +34,21 @@ export default function Gallery() {
         <span
           className={styles["right-arrow"]}
           onClick={() => {
-            // setTransition();
-            if (currentImage < images.length - 1) {
-              setCurrentImage(currentImage + 1);
-            } else {
-              setCurrentImage(0);
-            }
-            console.log(currentImage);
+            setCurrentPhoto(currentPhoto + 1);
+            changePhoto(currentPhoto + 1);
           }}
         >
           <img src="https://img.icons8.com/ultraviolet/64/undefined/chevron-right.png" />
         </span>
 
-        <img
-          id={images[currentImage].id}
-          className={styles.image}
-          src={images[currentImage].source}
-        />
-        {currentImage}
+        {images.map((image) => (
+          <img
+            id={image.id}
+            className={`${styles.photo} ${styles[image.state]}`}
+            src={image.source}
+            key={image.id}
+          />
+        ))}
       </div>
     </section>
   );

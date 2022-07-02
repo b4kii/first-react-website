@@ -1,6 +1,6 @@
 import React from "react";
 
-import buttons from "../../styles/Navigation.module.css"
+import buttons from "../../styles/Navigation.module.css";
 
 export default function CrossButton({ buttonClick }) {
   return (

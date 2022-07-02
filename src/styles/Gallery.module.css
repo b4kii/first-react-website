@@ -1,3 +1,5 @@
+/* TODO: style whole gallery section */
+
 .gallery-section {
   display: flex;
   background-color: #11efd1;
@@ -33,21 +35,28 @@
   }
 
   .left-arrow {
-    left: 2%;
+    left: -5%;
     top: calc(50% - 32px);
   }
 
   .right-arrow {
-    right: 2%;
+    right: -5%;
     top: calc(50% - 32px);
   }
 
-  .image {
+  .photo {
     height: 100%;
     width: 100%;
-    /* opacity: 1; */
-    animation: none 0.4s;
+
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .2s;
   }
 
-  /* TODO: style whole gallery section */
+  .active {
+    /* transform: scale(1); */
+    opacity: 1;
+  }
 }
