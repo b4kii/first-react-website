@@ -6,8 +6,8 @@ import Images from "./Images";
 import styles from "../../styles/Gallery.module.css";
 
 const boxVariant = {
-  visible: { y: 0, transition: {duration: 1, type: "spring", bounce: 0.3}},
-  hidden: { y: "80%"},
+  visible: { y: 0, opacity: 1, transition: {duration: 1, type: "spring", bounce: 0.3}},
+  hidden: { y: "50%", opacity: 0},
 };
 
 export default function Gallery() {

@@ -1,0 +1,60 @@
+@media screen and (min-width: 1200px) {
+  .faq-section {
+    min-height: 100vh;
+    background-color: purple;
+  }
+
+  .quotes-section {
+    background-image: linear-gradient(
+      to right bottom,
+      #2c05e9,
+      #004dfd,
+      #0071ff,
+      #008fff,
+      #00aaff,
+      #00bbfe,
+      #00caf8,
+      #00d7ef,
+      #00e2e8,
+      #00ebda,
+      #27f4c7,
+      #5ffbb0
+    );
+    display: flex;
+    justify-content: center;
+  }
+
+  .wrapper {
+    padding: 1rem;
+    height: max-content;
+    width: 100%;
+    text-align: center;
+    margin: 3.2% 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .start {
+    animation: appear 2s;
+  }
+
+  .text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .author { 
+    font-style: italic;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

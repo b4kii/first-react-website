@@ -22,7 +22,7 @@ export default function Navbar() {
   };
 
   return (
-    <>
+    <nav>
       {/* TODO: Add LOGO on the left side */}
       <h1 className={styles.logo}>LOGO</h1>
       <Overlay hideOverlay={setTransition} />
@@ -34,6 +34,6 @@ export default function Navbar() {
         )}
       </div>
       <ScrollTop />
-    </>
+    </nav>
   );
 }
