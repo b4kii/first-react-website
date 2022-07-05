@@ -88,7 +88,8 @@
 .hamburger,
 .cross {
   /* color: #181818; */
-  color: #4a78ff;
+  /* color: #4a78ff; */
+  color: white;
   border: none;
   background: none;
   position: fixed;
@@ -98,12 +99,12 @@
 
 .cross {
   animation: spin 0.2s ease-out;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .hamburger {
   animation: pop 0.7s;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .arrow {

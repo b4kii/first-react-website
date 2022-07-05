@@ -25,12 +25,13 @@
   }
 
   .wrapper {
-    padding: 1rem;
-    height: max-content;
+    /* padding: 2rem; */
+    min-height: 10vh;
     width: 100%;
     text-align: center;
     margin: 3.2% 0;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 0.5rem;
   }

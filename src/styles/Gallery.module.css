@@ -2,13 +2,16 @@
 
 .gallery-section {
   display: flex;
-  background-color: #11efd1;
 }
 
 @media screen and (min-width: 1200px) {
   .gallery-section {
     min-height: 100vh;
-    background-color: grey;
+    background: linear-gradient(
+      to right top,
+      #fff000,
+      #15ff56
+    );
     display: grid;
     place-items: center;
   }
