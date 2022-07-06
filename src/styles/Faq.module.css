@@ -46,8 +46,40 @@
     text-decoration: underline;
   }
 
-  .author { 
+  .author {
     font-style: italic;
+  }
+
+  .faq-container {
+    max-width: 900px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 5rem;
+    background-color: salmon;
+  }
+
+  .cross-button {
+    width: 20px;
+    height: 20px;
+    position: relative;
+  }
+
+  .first,
+  .second {
+    width: 20px;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: black;
+    transition: 0.5s ease-in-out;
+  }
+
+  .second {
+    transform: rotate(90deg);
   }
 }
 

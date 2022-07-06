@@ -12,7 +12,6 @@ export default function Quotes() {
 
   let data = [];
 
-  // TODO: Error handling
   const getQuotes = async () => {
     try {
       const response = await fetch(URL);

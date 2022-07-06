@@ -53,7 +53,8 @@
 
 /* to fix anyway */
 .logo {
-  color: #4a78ff;
+  /* color: #4a78ff; */
+  color: white;
   text-align: center;
   position: fixed;
   margin-top: 1.5rem;

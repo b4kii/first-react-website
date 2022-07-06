@@ -39,7 +39,7 @@ export default function ScrollTop() {
     window.addEventListener("scroll", handleScroll, false);
 
     return () => {
-      window.addEventListener("scroll", handleScroll, false);
+      window.removeEventListener("scroll", handleScroll, false);
     };
   }, []);
 
