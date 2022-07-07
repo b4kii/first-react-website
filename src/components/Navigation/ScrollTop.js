@@ -18,7 +18,7 @@ export default function ScrollTop() {
     const handleScroll = () => {
       const yPos = window.scrollY;
 
-      let scrollHeight = Math.max(
+      let height = Math.max(
         document.body.scrollHeight,
         document.documentElement.scrollHeight,
         document.body.offsetHeight,
@@ -26,13 +26,14 @@ export default function ScrollTop() {
         document.body.clientHeight,
         document.documentElement.clientHeight
       );
-      let lastElement =
-        document.getElementById("root").lastElementChild.clientHeight;
-      let bottomPage = Math.floor(yPos ) === scrollHeight - lastElement;
 
-      const isScrollingUp = (yPos < lastYPos || bottomPage) && yPos;
 
+      let innerHeight = window.innerHeight;
+      let isOnBottom = Math.floor(yPos ) === height - innerHeight;
+
+      const isScrollingUp = (yPos < lastYPos || isOnBottom) && yPos;
       setIsShowed(isScrollingUp);
+
       lastYPos = yPos;
     };
 
