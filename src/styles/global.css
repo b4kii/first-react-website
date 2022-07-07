@@ -20,7 +20,7 @@ body {
 }
 
 #contact {
-  min-height: 100vh;
+  min-height: 30vh;
   /* background-color: rgb(54, 151, 196); */
   background-image: linear-gradient(
     to right top,

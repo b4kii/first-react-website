@@ -1,11 +1,11 @@
 @media screen and (min-width: 1200px) {
   .faq-section {
     min-height: 100vh;
-    background-color: purple;
+    background-color: #181818;
   }
 
   .quotes-section {
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
       to right bottom,
       #2c05e9,
       #004dfd,
@@ -19,7 +19,8 @@
       #00ebda,
       #27f4c7,
       #5ffbb0
-    );
+    ); */
+    background-color: #181818;
     display: flex;
     justify-content: center;
   }
@@ -34,6 +35,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 0.5rem;
+    color: white;
   }
 
   .start {
@@ -41,30 +43,77 @@
   }
 
   .text {
+    margin: auto;
+    width: max-content;
     font-size: 1.2rem;
     font-weight: bold;
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
   }
 
   .author {
     font-style: italic;
   }
 
+  .question-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px;
+    gap: 2rem;
+  }
+
+  .faq-header {
+    color: white;
+    font-size: 4rem;
+  }
+
   .faq-container {
-    max-width: 900px;
-    margin: 10px auto;
+    min-width: 900px;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+  }
+
+  .faq-wrap {
+    background-color: white;
+    padding: 0 20px;
+  }
+
+  .question{
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    gap: 5rem;
-    background-color: salmon;
+    cursor: pointer;
+  }
+
+  .question-text {
+    pointer-events: none;
+    font-size: 20px;
+  }
+
+  .answer {
+    border-top: 1px solid #181818;
+    background-color: lightgrey;
+    max-width: 900px;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    transition: height 0.2s ease-in-out; 
+  }
+
+  .answer p {
+    padding: 10px 10px 10px 40px;
+    font-size: 1.1rem;
   }
 
   .cross-button {
     width: 20px;
     height: 20px;
     position: relative;
+    pointer-events: none;
   }
 
   .first,
@@ -75,7 +124,8 @@
     top: 50%;
     left: 0;
     background-color: black;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
+    border-radius: 2rem;
   }
 
   .second {
