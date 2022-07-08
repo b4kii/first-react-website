@@ -3,58 +3,80 @@ import { useState, useEffect } from "react";
 
 import FaqCrossButton from "./FaqCrossButton";
 import styles from "../../styles/Faq.module.css";
-import { act } from "react-dom/test-utils";
-
-//TODO: change file name
 
 const setOfQuestions = [
-  { question: "Czy ala ma psa?", answer: "Nie, kota.", id: "q1" },
+  {
+    question: "Czy ala ma psa?",
+    answer: "Nie, kota.",
+    id: "q1",
+    active: false
+  },
   {
     question: "Ile jest planet w układzie słonecznym?",
     answer: "Trochę ich jest.",
-    id: "q2"
+    id: "q2",
+    active: false
   },
-  { question: "Ile to jest 2 + 2?", answer: "Chyba 4.", id: "q3" },
+  {
+    question: "Ile to jest 2 + 2?",
+    answer: "Chyba 4.",
+    id: "q3",
+    active: false
+  },
   {
     question: "Dlaczego piłka jest okrągła?",
     answer: "Bo nie jest kwadratowa.",
-    id: "q4"
+    id: "q4",
+    active: false
   },
-  { question: "Czy misie jadą do boru?", answer: "Tak!", id: "q5" }
+  {
+    question: "Czy misie jadą do boru?",
+    answer: "Tak!",
+    id: "q5",
+    active: false
+  }
 ];
 
-
-const initial = setOfQuestions.map((question) => (
-  {id: question.id, active: false}
-));
-
 export default function Questions() {
-  const [isClicked, setIsClicked] = useState(false);
-  const [state, setState] = useState(initial);
+  const [active, setActive] = useState(setOfQuestions);
 
+  const searchForIndex = (id) => {
+    let i = 0,
+      index;
+    setOfQuestions.forEach((element) => {
+      if (id === element.id) {
+        index = i;
+      }
+      i++;
+    });
+    return index;
+  };
 
-  // TODO:
-  //  - fix state problem - you have to double click in order to activate animation
+  const updateActive = (id) => {
+    const newState = active.map(state => {
+      if (id === state.id) {
+        return {...state, active: !state.active};
+      }
 
-  const searchForElement = (id) => {
-    initial.map(item => {
-      return item.id === id && item.active;
-      // item.id === id && console.log(item.active);
-    })
+      return state;
+    });
+
+    setActive(newState);
   }
+
+  // Added object of states to track active buttons, but it can be done better
 
   const faqAnimation = (e) => {
     let faqElement = document.getElementById(e.target.id);
-    // console.log(searchForElement(e.target.id));
+    let index = searchForIndex(e.target.id);
 
     if (faqElement != null) {
-
       let parent = faqElement.parentElement;
       let firstBlock = faqElement.querySelector(`.${styles.first}`);
       let secondBlock = faqElement.querySelector(`.${styles.second}`);
       let answer = parent.querySelector(`.${styles.answer}`);
 
-      if (!isClicked) {
+      if (!active[index].active) {
         firstBlock.style.transform = "rotate(360deg)";
         answer.style.height = "40px";
         setTimeout(() => {
@@ -66,7 +88,7 @@ export default function Questions() {
         answer.style.height = "0";
       }
 
-      setIsClicked(!isClicked);
+      updateActive(e.target.id);
     }
   };
 
@@ -74,19 +96,16 @@ export default function Questions() {
     <>
       <div className={styles["faq-container"]}>
         {setOfQuestions.map((element) => (
-          <div key={element.id} className={styles["faq-wrap"]}
-          >
+          <div key={element.id} className={styles["faq-wrap"]}>
             <div
               className={styles.question}
               id={element.id}
               onClick={faqAnimation}
             >
-              <div className={styles["question-text"]}
-              >
+              <div className={styles["question-text"]}>
                 <strong>{element.question}</strong>
               </div>
-              <FaqCrossButton 
-              />
+              <FaqCrossButton />
             </div>
             <div className={styles.answer}>
               <p>- {element.answer}</p>
