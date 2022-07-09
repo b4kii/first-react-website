@@ -29,12 +29,12 @@
 }
 
 .left-arrow {
-  left: -5%;
+  left: -10%;
   top: calc(50% - 32px);
 }
 
 .right-arrow {
-  right: -5%;
+  right: -10%;
   top: calc(50% - 32px);
 }
 
@@ -55,7 +55,8 @@
 @media screen and (min-width: 1200px) {
   .gallery-section {
     min-height: 100vh;
-    background: linear-gradient(to right top, #fff000, #15ff56);
+    /* background: linear-gradient(to right top, #fff000, #15ff56); */
+    background-color: #1cdee6;
     display: grid;
     place-items: center;
   }
@@ -64,8 +65,9 @@
     width: 70%;
     height: 700px;
     position: relative;
+    box-shadow: 0 0 32px 12px rgba(0, 0, 0, 0.2);
   }
-/* 
+  /* 
   .left-arrow,
   .right-arrow {
     height: 64px;

@@ -5,7 +5,7 @@ import styles from "../../styles/Faq.module.css";
 
 const URL = "https://type.fit/api/quotes";
 
-// TODO: Animation is not working sometimes
+// TODO: Find better solution for animation, cuz it's not working sometimes
 
 export default function Quotes() {
   const [quote, setQuote] = useState([]);
