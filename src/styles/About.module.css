@@ -61,7 +61,7 @@
 .circle1 {
   position: absolute;
   top: 15%;
-  left: 25%;
+  left: 30%;
   height: 128px;
   width: 128px;
   background-image: url("../assets/molecules/mol-128.png");
@@ -72,7 +72,7 @@
 .circle2 {
   position: absolute;
   top: 20%;
-  left: 2%;
+  left: 20%;
   height: 128px;
   width: 128px;
   background-image: url("../assets/molecules/molecule-128.png");
@@ -106,7 +106,7 @@
   display: none;
   position: absolute;
   top: 25%;
-  left: 10%;
+  left: 25%;
   width: 256px;
   height: 256px;
   background-image: url("../assets/molecules/particle-256.png");

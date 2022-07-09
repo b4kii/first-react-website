@@ -1,49 +1,18 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-import FaqCrossButton from "./FaqCrossButton";
+import Question from "./Question"
+import Answer from "./Answer"
+
 import styles from "../../styles/Faq.module.css";
 
-const setOfQuestions = [
-  {
-    question: "Czy ala ma psa?",
-    answer: "Nie, kota.",
-    id: "q1",
-    active: false
-  },
-  {
-    question: "Ile jest planet w układzie słonecznym?",
-    answer: "Trochę ich jest.",
-    id: "q2",
-    active: false
-  },
-  {
-    question: "Ile to jest 2 + 2?",
-    answer: "Chyba 4.",
-    id: "q3",
-    active: false
-  },
-  {
-    question: "Dlaczego piłka jest okrągła?",
-    answer: "Bo nie jest kwadratowa.",
-    id: "q4",
-    active: false
-  },
-  {
-    question: "Czy misie jadą do boru?",
-    answer: "Tak!",
-    id: "q5",
-    active: false
-  }
-];
-
-export default function Questions() {
-  const [active, setActive] = useState(setOfQuestions);
+export default function Questions({ questionsData }) {
+  const [active, setActive] = useState(questionsData);
 
   const searchForIndex = (id) => {
     let i = 0,
       index;
-    setOfQuestions.forEach((element) => {
+    questionsData.forEach((element) => {
       if (id === element.id) {
         index = i;
       }
@@ -53,18 +22,18 @@ export default function Questions() {
   };
 
   const updateActive = (id) => {
-    const newState = active.map(state => {
+    const newState = active.map((state) => {
       if (id === state.id) {
-        return {...state, active: !state.active};
+        return { ...state, active: !state.active };
       }
 
       return state;
     });
 
     setActive(newState);
-  }
+  };
 
-  // Added object of states to track active buttons, but it can be done better
+  // Ugly as fk but good for now
 
   const faqAnimation = (e) => {
     let faqElement = document.getElementById(e.target.id);
@@ -92,26 +61,28 @@ export default function Questions() {
     }
   };
 
+  let wrapper = [];
+
+  questionsData.forEach((question) => {
+    wrapper.push(
+      <div 
+        key={question.id}
+        className={styles["faq-wrap"]}
+      >
+        <Question 
+          id={question.id}
+          question={question.question}
+          animation={faqAnimation}
+        />
+        <Answer answer={question.answer} />
+      </div>
+    )
+  })
+
   return (
     <>
       <div className={styles["faq-container"]}>
-        {setOfQuestions.map((element) => (
-          <div key={element.id} className={styles["faq-wrap"]}>
-            <div
-              className={styles.question}
-              id={element.id}
-              onClick={faqAnimation}
-            >
-              <div className={styles["question-text"]}>
-                <strong>{element.question}</strong>
-              </div>
-              <FaqCrossButton />
-            </div>
-            <div className={styles.answer}>
-              <p>- {element.answer}</p>
-            </div>
-          </div>
-        ))}
+        {wrapper}
       </div>
     </>
   );

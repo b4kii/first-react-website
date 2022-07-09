@@ -14,8 +14,7 @@
     rgba(240, 240, 240, 0.2),
     rgba(240, 240, 240, 0.2)
   );
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(50px) saturate(100%);
   transition: 0.6s;
 }
 
@@ -53,7 +52,6 @@
 
 /* to fix anyway */
 .logo {
-  /* color: #4a78ff; */
   color: white;
   text-align: center;
   position: fixed;
@@ -88,8 +86,6 @@
 
 .hamburger,
 .cross {
-  /* color: #181818; */
-  /* color: #4a78ff; */
   color: white;
   border: none;
   background: none;
@@ -125,7 +121,6 @@
   cursor: pointer;
   z-index: 20;
 }
-
 @keyframes pop {
   0% {
     transform: scale(0);
