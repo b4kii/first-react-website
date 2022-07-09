@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/first-react-website/static/css/main.1ec233d5.css",
+    "main.js": "/first-react-website/static/js/main.1f231362.js",
+    "static/media/video.mp4": "/first-react-website/static/media/video.f36341d00d969dc2a925.mp4",
+    "static/media/bird.jpg": "/first-react-website/static/media/bird.04254fc677b77c0af389.jpg",
+    "static/media/rice.jpg": "/first-react-website/static/media/rice.4944ffe0a95e83bba756.jpg",
+    "static/media/dog.jpg": "/first-react-website/static/media/dog.ec03af0800ac62cdbf65.jpg",
+    "static/media/strawberries.jpg": "/first-react-website/static/media/strawberries.3e64f4f599000bbe687b.jpg",
+    "static/media/flower.jpg": "/first-react-website/static/media/flower.97ff8b6606d81d0229ae.jpg",
+    "static/media/person2.png": "/first-react-website/static/media/person2.c7f8b32d00987788408a.png",
+    "static/media/cat.jpg": "/first-react-website/static/media/cat.2d894b1e2330c03b1d49.jpg",
+    "static/media/small-bird.jpg": "/first-react-website/static/media/small-bird.80df4668aa06ad54b4a7.jpg",
+    "static/media/particle-256.png": "/first-react-website/static/media/particle-256.4de84b81eb8106ff7d0f.png",
+    "static/media/particles-128.png": "/first-react-website/static/media/particles-128.1dbe083a24db87c29a8e.png",
+    "index.html": "/first-react-website/index.html",
+    "main.1ec233d5.css.map": "/first-react-website/static/css/main.1ec233d5.css.map",
+    "main.1f231362.js.map": "/first-react-website/static/js/main.1f231362.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ec233d5.css",
+    "static/js/main.1f231362.js"
+  ]
+}
