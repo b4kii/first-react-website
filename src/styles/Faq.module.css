@@ -1,75 +1,131 @@
+.faq-section {
+  min-height: 100vh;
+  background-color: #1cdee6;
+}
+
+.quotes-section {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  /* padding: 2rem; */
+  min-height: 200px;
+  width: 100%;
+  text-align: center;
+  margin: 3.2% 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: white;
+}
+
+.start {
+  animation: appear 2s;
+}
+
+.text {
+  margin: 10px auto;
+  width: 80%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+}
+
+.author {
+  font-style: italic;
+}
+
+.question-wrapper {
+  margin: auto;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.faq-header {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+
+.faq-container {
+  min-width: 300px;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
+}
+
+.faq-wrap {
+  background-color: white;
+  padding: 0 20px;
+}
+
+.question {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.question-text {
+  width: 200px;
+  pointer-events: none;
+  font-size: 1rem;
+}
+
+.answer {
+  border-top: 1px solid #181818;
+  background-color: lightgrey;
+  max-width: 900px;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  transition: height 0.2s ease-in-out;
+}
+
+.answer p {
+  padding: 10px 10px 10px 30px;
+  font-size: 1.1rem;
+}
+
+.cross-button {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  pointer-events: none;
+}
+
+.first,
+.second {
+  width: 20px;
+  height: 4px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: black;
+  transition: 0.3s ease-in-out;
+  border-radius: 2rem;
+}
+
+.second {
+  transform: rotate(90deg);
+}
+
+@media screen and (min-width: 768px) {
+  .faq-container {
+    min-width: 600px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
-  .faq-section {
-    min-height: 100vh;
-    /* background-color: #181818; */
-    background-color: #1cdee6;
-  }
-
-  .quotes-section {
-    /* background-image: linear-gradient(
-      to right bottom,
-      #2c05e9,
-      #004dfd,
-      #0071ff,
-      #008fff,
-      #00aaff,
-      #00bbfe,
-      #00caf8,
-      #00d7ef,
-      #00e2e8,
-      #00ebda,
-      #27f4c7,
-      #5ffbb0
-    ); */
-    /* background-color: #181818; */
-    /* background-color: #1cdee6; */
-    display: flex;
-    justify-content: center;
-  }
-
-  .wrapper {
-    /* padding: 2rem; */
-    min-height: 10vh;
-    width: 100%;
-    text-align: center;
-    margin: 3.2% 0;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.5rem;
-    color: white;
-  }
-
-  .start {
-    animation: appear 2s;
-  }
-
   .text {
-    margin: auto;
     width: max-content;
-    font-size: 1.2rem;
-    font-weight: bold;
-    /* text-decoration: underline; */
-    border-bottom: 1px solid white;
-    padding-bottom: 10px;
-  }
-
-  .author {
-    font-style: italic;
-  }
-
-  .question-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 100px;
-    gap: 2rem;
-  }
-
-  .faq-header {
-    color: white;
-    font-size: 4rem;
   }
 
   .faq-container {
@@ -77,62 +133,11 @@
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
   }
 
-  .faq-wrap {
-    background-color: white;
-    padding: 0 20px;
-  }
-
-  .question {
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-  }
-
   .question-text {
-    pointer-events: none;
-    font-size: 20px;
+    min-width: 500px;
+    font-size: 1.2rem;
   }
 
-  .answer {
-    border-top: 1px solid #181818;
-    background-color: lightgrey;
-    max-width: 900px;
-    height: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    transition: height 0.2s ease-in-out;
-  }
-
-  .answer p {
-    padding: 10px 10px 10px 40px;
-    font-size: 1.1rem;
-  }
-
-  .cross-button {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    pointer-events: none;
-  }
-
-  .first,
-  .second {
-    width: 20px;
-    height: 4px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    background-color: black;
-    transition: 0.3s ease-in-out;
-    border-radius: 2rem;
-  }
-
-  .second {
-    transform: rotate(90deg);
-  }
 }
 
 @keyframes appear {

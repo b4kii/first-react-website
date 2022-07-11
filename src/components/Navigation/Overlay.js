@@ -2,6 +2,8 @@ import React from "react";
 
 import menu from "../../styles/Navigation.module.css"
 
+// TODO: Fix overlay hover transitions
+
 export default function Overlay({ hideOverlay }) {
   return (
     <>

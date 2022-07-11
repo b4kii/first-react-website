@@ -21,9 +21,9 @@ export default function Navbar() {
     }
   };
 
+  //TODO: Add LOGO on the left side
   return (
     <nav>
-      {/* TODO: Add LOGO on the left side */}
       <h1 className={styles.logo}>LOGO</h1>
       <Overlay hideOverlay={setTransition} />
       <div className={styles['button-wrapper']}>

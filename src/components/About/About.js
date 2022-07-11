@@ -7,6 +7,9 @@ import Vid from "../../assets/video.mp4";
 import { Person } from "../../assets/";
 
 export default function About() {
+
+
+  // Blehh.. 
   useEffect(() => {
     const handleScrollDown = () => {
       const yPos = window.scrollY;
@@ -51,6 +54,7 @@ export default function About() {
     };
   }, []);
 
+  // TODO: Clean up the code
   return (
     <section id="about" className={styles["about-section"]}>
       <video loop autoPlay muted>
@@ -89,18 +93,7 @@ export default function About() {
         >
           <h2 className={styles["about-header"]}>ABOUT</h2>
           <p className={styles["about-text"]}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias
-            aliquid delectus accusantium repellendus dignissimos aut facere hic
-            nisi necessitatibus, tempora quae nesciunt numquam vero, nostrum
-            quaerat eius dolorem autem fugit aspernatur ad. Officiis est
-            voluptates dolorem laudantium a quas in laborum harum, dolores
-            aliquid? Animi culpa, voluptatibus, in placeat beatae facere,
-            laboriosam sequi nam ipsum deserunt quam non aut repudiandae sed
-            nisi expedita. Assumenda, quo? Aspernatur earum quaerat consectetur
-            ad voluptatem, fugit vitae ipsum facilis iusto laudantium vero?
-            Dolores eos, aut adipisci placeat quia sed, sapiente in consequuntur
-            autem ad iusto deserunt quidem magni corrupti, ex perferendis
-            distinctio beatae dolorum.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci eaque perspiciatis non nisi, fugit dicta. Eum obcaecati ab unde magni laudantium. Laborum id illum illo quibusdam incidunt velit eaque, dolore, at cum porro totam amet maxime, architecto eveniet quam aspernatur consectetur labore deserunt facilis aperiam. Ipsum nihil repellendus asperiores voluptatibus?
           </p>
         </motion.div>
       </div>

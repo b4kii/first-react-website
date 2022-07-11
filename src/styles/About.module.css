@@ -6,7 +6,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
+  align-items: center;
   justify-content: center;
 }
 
@@ -23,29 +23,34 @@
   z-index: 0;
 }
 
+.text-wrapper {
+  width: 80%;
+  margin: 25px auto;
+}
+
 .about-header {
   color: white;
   font-weight: bold;
   text-align: center;
   font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .about-text {
-  font-size: 1.1rem;
-  /* line-height: 1.5rem; */
-}
-
-.text-wrapper {
-  width: 80%;
-  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
 }
 
 .photo-wrapper {
-  justify-content: center;
+  margin: auto;
+  flex-direction: column;
+  width: max-content;
+  justify-content: flex-end;
 }
 
 .photo-wrapper img {
   width: auto;
+  height: 250px;
 }
 
 .about-section video {
@@ -61,7 +66,7 @@
 .circle1 {
   position: absolute;
   top: 15%;
-  left: 30%;
+  left: 27%;
   height: 128px;
   width: 128px;
   background-image: url("../assets/molecules/mol-128.png");
@@ -72,7 +77,7 @@
 .circle2 {
   position: absolute;
   top: 20%;
-  left: 20%;
+  left: 18%;
   height: 128px;
   width: 128px;
   background-image: url("../assets/molecules/molecule-128.png");
@@ -83,7 +88,7 @@
 .circle3 {
   position: absolute;
   top: 30%;
-  right: 20%;
+  right: 25%;
   width: 64px;
   height: 64px;
   background-image: url("../assets/molecules/molecule-64.png");
@@ -105,8 +110,8 @@
 .circle5 {
   display: none;
   position: absolute;
-  top: 25%;
-  left: 25%;
+  top: 35%;
+  left: 30%;
   width: 256px;
   height: 256px;
   background-image: url("../assets/molecules/particle-256.png");
@@ -132,6 +137,48 @@
 .circle5,
 .circle6 {
   transition: 0.1s;
+  display: none;
+}
+
+/* It's bad i know */
+
+@media screen and (min-width: 375px) {
+  .about-text {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .photo-wrapper img {
+    height: 300px;
+  }
+
+  .about-text {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-text {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .photo-wrapper img {
+    height: 400px;
+  }
+
+  .about-header {
+    font-size: 5rem;
+  }
+  .about-text {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -157,31 +204,29 @@
   }
 
   .text-wrapper {
-    width: 80%;
-    margin: auto;
+    margin: 50px auto;
   }
 
   .about-header {
     font-size: 4rem;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   .about-text {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     line-height: 2.6rem;
   }
 
-  .photo-wrapper {
-    padding: 0;
-    margin: 0;
-    width: max-content;
-  }
-
   .photo-wrapper img {
-    width: auto;
+    height: 300px;
   }
 
-  .circle5 {
+  .circle1,
+  .circle2,
+  .circle3,
+  .circle4,
+  .circle5,
+  .circle6 {
     display: block;
   }
 }

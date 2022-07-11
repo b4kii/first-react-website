@@ -49,7 +49,7 @@ export default function Quotes() {
         className={`${styles.wrapper} ${animate ? styles.start : ""}`}
       >
         <p className={styles.text}>{error ? error : quote.text }</p>
-        <small className={styles.author}>{error ? error : quote.author}</small>
+        <small className={styles.author}>{error ? error : quote.author === null ? "Someone wise" : quote.author}</small>
       </div>
     </div>
   );

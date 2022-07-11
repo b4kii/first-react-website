@@ -1,10 +1,9 @@
-/* TODO: style whole gallery section */
-
 .gallery-section {
   min-height: 100vh;
   display: grid;
   place-items: center;
   background-color: red;
+  display: none;
 }
 
 .images-wrapper {
