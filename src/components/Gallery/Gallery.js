@@ -22,6 +22,7 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className={styles["gallery-section"]}>
+      <h2 className={styles["gallery-header"]}>Gallery</h2>
       <motion.div
         className={styles["images-wrapper"]}
         ref={ref}

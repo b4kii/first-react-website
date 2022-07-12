@@ -2,9 +2,19 @@
 
 .gallery-section {
   min-height: 100vh;
-  display: grid;
-  place-items: center;
+  /* display: grid;
+  place-items: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   background-color: #1cdee6;;
+}
+
+.gallery-header {
+  color: white;
+  font-size: 2rem;
 }
 
 .images-wrapper {
@@ -64,8 +74,11 @@
   .gallery-section {
     min-height: 100vh;
     background-color: #1cdee6;
-    display: grid;
-    place-items: center;
+    gap: 50px;
+  }
+
+  .gallery-header {
+    font-size: 4rem;
   }
 
   .images-wrapper {
@@ -77,7 +90,7 @@
 
   .left-arrow:hover,
   .right-arrow:hover {
-    background-color: turquoise;
+    background-color:  #1cdee6;
   }
 
   .active {

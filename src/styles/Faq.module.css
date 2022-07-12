@@ -147,6 +147,10 @@
     width: max-content;
   }
 
+  .faq-header {
+    font-size: 4rem;
+  }
+
   .faq-container {
     min-width: 900px;
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);

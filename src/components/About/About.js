@@ -91,7 +91,7 @@ export default function About() {
             x: "-110%"
           }}
         >
-          <h2 className={styles["about-header"]}>ABOUT</h2>
+          <h2 className={styles["about-header"]}>About</h2>
           <p className={styles["about-text"]}>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci eaque perspiciatis non nisi, fugit dicta. Eum obcaecati ab unde magni laudantium. Laborum id illum illo quibusdam incidunt velit eaque, dolore, at cum porro totam amet maxime, architecto eveniet quam aspernatur consectetur labore deserunt facilis aperiam. Ipsum nihil repellendus asperiores voluptatibus?
           </p>
