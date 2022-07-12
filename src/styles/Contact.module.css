@@ -47,7 +47,7 @@ textarea {
   resize: none;
 }
 
-button {
+.wrapper button {
   font-family: inherit;
   height: 50px;
   width: 150px;
@@ -59,7 +59,7 @@ button {
   background-color: whitesmoke;
 }
 
-button:hover {
+.wrapper button:hover {
   background-color: lightgrey;
 }
 

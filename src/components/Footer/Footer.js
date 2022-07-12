@@ -15,22 +15,31 @@ export default function Footer() {
   return (
     <footer id="footer" className="footer-section">
       <dir className="icons-wrapper">
-      <a href="/#" className="youtube">
+      <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
         <YouTube 
           style={iconStyles}
         />
       </a>
-      <a href="/#">
+      <a 
+        href="https://www.instagram.com"
+        target="_blank" rel="noopener noreferrer"
+      >
         <Instagram 
           style={iconStyles}
         />
       </a>
-      <a href="/#">
+      <a
+        href="https://www.twitter.com"
+        target="_blank" rel="noopener noreferrer"
+      >
         <Twitter 
           style={iconStyles}
         />
       </a>
-      <a href="/#">
+      <a 
+        href="https://www.github.com"
+        target="_blank" rel="noopener noreferrer"
+      >
         <GitHub 
           style={iconStyles}
         />
