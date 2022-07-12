@@ -5,6 +5,8 @@ import {Navigation} from "./components/Navigation";
 import {About} from "./components/About";
 import {Gallery} from "./components/Gallery";
 import {Faq} from "./components/Faq";
+import {Contact} from "./components/Contact";
+import { Footer } from "./components/Footer";
 
 export default function App() {
   return (
@@ -13,8 +15,8 @@ export default function App() {
       <About />
       <Gallery />
       <Faq />
-      {/* <div id="pricing"></div> */}
-      <div id="contact"></div>
+      <Contact />
+      <Footer />
     </>
   );
 }

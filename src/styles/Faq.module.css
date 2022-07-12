@@ -31,7 +31,7 @@
   font-weight: bold;
   border-bottom: 1px solid white;
   padding-bottom: 10px;
-  height: 80px;
+  height: 100px;
   display: flex;
   align-items: flex-end;
 }
@@ -76,7 +76,7 @@
 }
 
 .question-text {
-  width: 200px;
+  /* width: 200px; */
   pointer-events: none;
   /* font-size: 1rem; */
 }

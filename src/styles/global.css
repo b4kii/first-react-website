@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 
-/* TODO: Add resposnivenes */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,22 +20,26 @@ body {
   text-align: center;
 }
 
-#contact {
-  min-height: 100vh;
-  /* background-color: rgb(54, 151, 196); */
-  background-image: linear-gradient(
-    to right top,
-    #2c05e9,
-    #004dfd,
-    #0071ff,
-    #008fff,
-    #00aaff,
-    #00bbfe,
-    #00caf8,
-    #00d7ef,
-    #00e2e8,
-    #00ebda,
-    #27f4c7,
-    #5ffbb0
-  );
+.footer-section{
+  height: 15vh;
+  background-color: #1cdee6;
+  display: grid;
+  place-items: center;
+}
+
+.icons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.youtube {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .icons-wrapper {
+    gap: 5rem;
+  }
 }
