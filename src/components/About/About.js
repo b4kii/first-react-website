@@ -25,7 +25,7 @@ export default function About() {
           "about"
         ).style.transform = `translateY(${yPosOffset}vh)`;
 
-        // Animate circles while scrolling
+        // Animate circles while scrolling - Bleh
         document.getElementById("c1").style.transform = `translate(${
           yPosOffset * -50
         }px, ${yPosOffset * 30}px) rotate(${yPosOffset * 30}deg)`;

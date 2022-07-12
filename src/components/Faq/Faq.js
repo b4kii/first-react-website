@@ -6,38 +6,38 @@ import styles from "../../styles/Faq.module.css";
 
 const questionsData = [
   {
-    question: "Czy ala ma psa?",
-    answer: "Nie, kota.",
+    question: "Who created the operating system 'Linux'?",
+    answer: "Linus Torvalds",
     id: "q1",
     active: false
   },
   {
-    question: "Ile jest planet w układzie słonecznym?",
-    answer: "Trochę ich jest.",
+    question: "The fear of punishment is known as what?",
+    answer: "Poinephobia",
     id: "q2",
     active: false
   },
   {
-    question: "Ile to jest 2 + 2?",
-    answer: "Chyba 4.",
+    question: "What is a nebula?",
+    answer: "A cloud of dust and gas",
     id: "q3",
     active: false
   },
   {
-    question: "Dlaczego piłka jest okrągła?",
-    answer: "Bo tak!",
+    question: "What part of the atom has no charge?",
+    answer: "Neutron",
     id: "q4",
     active: false
   },
   {
-    question: "Czy misie jadą do boru?",
-    answer: "Tak!",
+    question: "Gluten is a type of what?",
+    answer: "Protein",
     id: "q5",
     active: false
   },
   {
-    question: "Ilu jest krasnoludków?",
-    answer: "Jest siedmiu krasnoludków.",
+    question: "What does a hygrometer measure?",
+    answer: "Humidity",
     id: "q6",
     active: false
   }

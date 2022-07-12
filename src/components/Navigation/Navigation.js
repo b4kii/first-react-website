@@ -24,8 +24,9 @@ export default function Navbar() {
   //TODO: Add LOGO on the left side
   return (
     <nav>
-      <h1 className={styles.logo}>LOGO</h1>
       <Overlay hideOverlay={setTransition} />
+      {/* <h1 className={styles.logo}>LOGO</h1> */}
+      <span className={styles.logo}>LOGO</span>
       <div className={styles['button-wrapper']}>
         {isDropped ? (
           <CrossButton buttonClick={setTransition} condition={isDropped} />

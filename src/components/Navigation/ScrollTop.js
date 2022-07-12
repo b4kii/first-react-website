@@ -66,12 +66,8 @@ export default function ScrollTop() {
           duration: 1
         }
       }}
-      style={{
-        background: `url(${Arrow})`
-      }}
     >
-      {/* Idk if its better to use img tag or icon as bg image */}
-      {/* <img src={Arrow} alt="arrow"/> */}
+      <img src={Arrow} alt="arrow"/>
     </motion.button>
   );
 }

@@ -9,7 +9,6 @@
 }
 
 .wrapper {
-  /* padding: 2rem; */
   min-height: 200px;
   width: 100%;
   text-align: center;
@@ -75,7 +74,7 @@
 .question-text {
   width: 200px;
   pointer-events: none;
-  font-size: 1rem;
+  /* font-size: 1rem; */
 }
 
 .answer {
@@ -118,8 +117,24 @@
 }
 
 @media screen and (min-width: 768px) {
+  .text {
+    font-size: 1.5rem;
+  }
+
+  .author {
+    font-size: 1.2rem;
+  }
+
   .faq-container {
     min-width: 600px;
+  }
+
+  .question-text {
+    font-size: 1.5rem;
+  }
+
+  .answer p{
+    font-size: 1.4rem;
   }
 }
 

@@ -33,8 +33,6 @@ export default function Questions({ questionsData }) {
     setActive(newState);
   };
 
-  // Ugly as fk but good for now
-
   const faqAnimation = (e) => {
     let faqElement = document.getElementById(e.target.id);
     let index = searchForIndex(e.target.id);
