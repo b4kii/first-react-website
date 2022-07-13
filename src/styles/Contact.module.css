@@ -25,7 +25,7 @@
   gap: 1rem;
 }
 
-input,
+.wrapper input,
 textarea {
   font-family: inherit;
   font-size: 1rem;
@@ -34,6 +34,7 @@ textarea {
   border: none;
   outline: none;
   background-color: whitesmoke;
+  box-shadow: 0 0 12px 4px grey;
 }
 
 input[type="text"] {
@@ -57,6 +58,7 @@ textarea {
   cursor: pointer;
   outline: none;
   background-color: whitesmoke;
+  box-shadow: 0 0 12px 4px grey;
 }
 
 .wrapper button:hover {
