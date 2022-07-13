@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/first-react-website/static/css/main.210000be.css",
-    "main.js": "/first-react-website/static/js/main.79b5ee94.js",
+    "main.css": "/first-react-website/static/css/main.88f67b82.css",
+    "main.js": "/first-react-website/static/js/main.b7dfcb6f.js",
     "static/media/video.mp4": "/first-react-website/static/media/video.f36341d00d969dc2a925.mp4",
     "static/media/bird.jpg": "/first-react-website/static/media/bird.04254fc677b77c0af389.jpg",
     "static/media/rice.jpg": "/first-react-website/static/media/rice.4944ffe0a95e83bba756.jpg",
@@ -14,11 +14,11 @@
     "static/media/particle-256.png": "/first-react-website/static/media/particle-256.4de84b81eb8106ff7d0f.png",
     "static/media/particles-128.png": "/first-react-website/static/media/particles-128.1dbe083a24db87c29a8e.png",
     "index.html": "/first-react-website/index.html",
-    "main.210000be.css.map": "/first-react-website/static/css/main.210000be.css.map",
-    "main.79b5ee94.js.map": "/first-react-website/static/js/main.79b5ee94.js.map"
+    "main.88f67b82.css.map": "/first-react-website/static/css/main.88f67b82.css.map",
+    "main.b7dfcb6f.js.map": "/first-react-website/static/js/main.b7dfcb6f.js.map"
   },
   "entrypoints": [
-    "static/css/main.210000be.css",
-    "static/js/main.79b5ee94.js"
+    "static/css/main.88f67b82.css",
+    "static/js/main.b7dfcb6f.js"
   ]
 }
