@@ -67,7 +67,6 @@ export default function ScrollTop() {
         }
       }}
     >
-      <img src={Arrow} alt="arrow"/>
     </motion.button>
   );
 }

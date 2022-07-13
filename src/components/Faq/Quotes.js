@@ -5,8 +5,6 @@ import styles from "../../styles/Faq.module.css";
 
 const URL = "https://type.fit/api/quotes";
 
-// TODO: Container is resizing while changing quotes idk why
-
 export default function Quotes() {
   const [quote, setQuote] = useState([]);
   const [animate, setAnimate] = useState(true);
